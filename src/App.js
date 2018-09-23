@@ -1,12 +1,19 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import CocktailsContainer from './components/CocktailsContainer'
+import React, { Component } from "react";
+// import logo from './logo.svg';
+import "./App.css";
+import CocktailsContainer from "./components/CocktailsContainer";
 
 class App extends Component {
   render() {
     return (
-      <CocktailsContainer />
+      <div>
+        <center>
+          <h1>🍹 Cheers 🍸</h1>
+        </center>
+        <div>
+          <CocktailsContainer />
+        </div>
+      </div>
     );
   }
 }
