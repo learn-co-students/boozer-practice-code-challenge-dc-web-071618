@@ -1,14 +1,20 @@
-import React, { Component } from 'react'
-import Cocktail from './Cocktail'
+import React, { Component } from "react";
+import Cocktail from "./Cocktail";
 
 class CocktailsList extends Component {
-  render(){
-    return (
-      <div id="cocktail-list">
+  createCocktailList = () => {
+    return this.props.cocktails.map(cocktail => (
+      <Cocktail
+        key={cocktail.id}
+        cocktail={cocktail}
+        selectCocktail={this.props.selectCocktail}
+      />
+    ));
+  };
 
-      </div>
-    )
+  render() {
+    return <div id="cocktail-list">{this.createCocktailList()}</div>;
   }
 }
 
-export default CocktailsList
+export default CocktailsList;
